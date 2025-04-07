@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <ul>
+        <% messageList.forEach((message) => { %>
+            <li>
+                <h2> <%= message.text %></h2>
+                <h3> <%= message.user %> </h3>
+                <h3> <%= message.date.toString() %> </h3>
+                <a href="message/<%=message.id %>" >Direct Link</a>
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/new">Add New Message</a>
+  </body>
+</html>
